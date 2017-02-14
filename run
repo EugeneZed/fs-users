@@ -1,0 +1,2 @@
+#!/bin/bash
+./node_modules/babel-cli/bin/babel-node.js --presets es2015,react,stage-2 ./src/server/server.js
