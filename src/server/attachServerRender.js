@@ -6,7 +6,7 @@ import {routes} from '../client/js/Routes';
 import store from '../client/js/store';
 import NotFoundPage from '../client/js/components/NotFoundPage';
 
-export function(app){
+export default function (app) {
   app.get('*', (req, res) => {
     match(
       { routes: routes, location: req.url },

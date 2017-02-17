@@ -6,7 +6,8 @@ module.exports = {
     connection: {
       database: 'fs-users-2',
       user:     'user',
-      password: 'user'
+      password: 'user',
+      host: 'localhost'
     }
   }
 

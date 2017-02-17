@@ -6,11 +6,23 @@ import attachServerRender from './attachServerRender';
 import Knex from 'knex';
 import knexConfig from './knexfile';
 import {Model} from 'objection';
-
+import * as models from './models';
 const app = new Express();
 const server = new Server(app);
-const knex = Knex(knexConfig);
+const knex = Knex(knexConfig.development);
 Model.knex(knex);
+
+// console.log(models);
+
+models.User.query().insertGraph({
+  localAuth:{
+    firstName: "Jay",
+    lastName: "Sridharan",
+    email: "jayasurya.sridharan@gmail.com"
+  }
+}).then(function(me){
+  console.log(me.id);
+});
 
 app.set('view engine', 'ejs')
    .set('views', path.join(__dirname, '../client/views'))
