@@ -1,0 +1,141 @@
+$susy: (
+  gutters: 1/10,
+);
+.grid_container{
+  @include container();
+}
+
+.firstBomItem{
+  @include span(1 at 1 of 4)
+}
+.lastBomItem{
+  @include span(last 1 of 4)
+}
+.middleBomItem{
+  @include span(1 at 2 of 4)
+}
+
+.itemModalPicture{
+  @include span(4 at 1 of 10)
+}
+.itemModalContent{
+  @include span(6 at 5 of 10)
+}
+$susy: (
+  gutters: 1/12,
+);
+.itemModal1of8Left{
+  @include span(1 at 1 of 8)
+}
+.itemModal1of8Right{
+  @include span(1 at 2 of 8)
+}
+.itemModal2of8Left{
+  @include span(2 at 1 of 8)
+}
+.itemModal2of8Right{
+  @include span(2 at 3 of 8)
+}
+.itemModal4of8Left{
+  @include span(4 at 1 of 8)
+}
+.itemModal4of8Right{
+  @include span(4 at 5 of 8)
+}
+.itemModal8of8{
+  @include span(8 at 1 of 8)
+}
+
+.marginTop20{
+  margin-top: 20px;
+}
+
+.border1pxBlack{
+  border: 1px solid black;
+}
+
+
+
+
+.bomItemsView{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: auto;
+    bottom: auto;
+    display: block;
+}
+
+.square-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border-bottom: 1px solid grey;
+}
+.square-box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    text-align: center;
+    .helper{
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img{
+      width: 100%;
+    }
+}
+
+
+
+.bomItem{
+  height: 100%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  background-color: #ffffff;
+  position: relative;
+  height: auto;
+  margin-bottom: 15px;
+
+  p{
+    text-align: center;
+  }
+
+  .statusBar{
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    span{
+      font-family: "Open Sans Bold"
+    }
+  }
+
+  .bomItemTitle{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 4% !important;
+    font-weight: bolder;
+    font-family: "Open Sans Bold";
+
+    &:hover{
+      white-space: normal !important;
+    }
+  }
+
+}

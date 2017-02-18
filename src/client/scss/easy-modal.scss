@@ -1,0 +1,116 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+
+
+.easymodal{
+
+  .easymodal__overlay{
+    background: rgba(43, 46, 56, 0.9);
+    backface-visibility: hidden;
+    position: fixed;
+    z-index:9999;
+    top: -5000px;
+    right: -5000px;
+    bottom: -5000px;
+    left: -5000px;
+  }
+
+  .easymodal__wrapper{
+    backface-visibility: hidden;
+    display:block;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 2px;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    vertical-align: middle;
+
+    &:after{
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      margin-left: -0.05em;
+      content: "";
+    }
+
+  }
+
+    @media only screen and (min-width: 641px) {
+        .easymodal__body {
+            max-width: 700px;
+        }
+    }
+  .easymodal__body{
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 35px;
+    transform: translate3d(0, 0, 0);
+    color: #2b2e38;
+    background: #fff;
+    position: relative;
+    text-size-adjust: 100%;
+    display: inline-block;
+  }
+  .easymodal__close{
+
+    padding: 4px 12px;
+    text-align: center;
+    vertical-align: middle !important;
+    background-color: #d9d9d9;
+    border: 1px transparent solid;
+    color: #222222;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    font-size: 14px;
+    line-height: 16px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    width: 35px;
+    height: 35px;
+    transition: color 0.2s;
+    text-decoration: none;
+
+    &:before {
+      font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+      font-size: 25px;
+      line-height: 35px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 35px;
+      content: "\00d7";
+      text-align: center;
+    }
+  }
+
+  &.easymodal__is_open{
+    -webkit-animation: fadein 0.25s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.25s; /* Firefox < 16 */
+        -ms-animation: fadein 0.25s; /* Internet Explorer */
+         -o-animation: fadein 0.25s; /* Opera < 12.1 */
+            animation: fadein 0.25s;
+  }
+
+  &.easymodal__is_closed{
+    display: none;
+  }
+}

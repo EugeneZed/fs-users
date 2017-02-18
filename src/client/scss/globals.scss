@@ -1,0 +1,189 @@
+/*H**********************************************************************
+* FILENAME :        scss/globals.scss
+*
+* DESCRIPTION :
+*       Defines global css classes that affect (almost) all elements rendered
+*       Affects all common elements suchs as heading and paragraphs.
+*
+* EXPORTS :
+*       ---
+*
+* NOTES :
+*       ---
+*
+* AUTHOR :    Jay Sridharan       START DATE :    22 Dec 16
+*
+*H*/
+
+@import '~grommet/scss/vanilla/index';
+
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/J0GYVYTizO1mjpT3aOcSbQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: "Open Sans Light";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Segoe UI Light"), local("Open Sans Light"), local("OpenSans-Light"), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Segoe UI"), local("Open Sans"), local("OpenSans"), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Segoe UI Bold"), local("Open Sans Bold"), local("OpenSans-Bold"), url(https://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 10px 0;
+}
+
+*{
+
+      font-family: 'Segoe UI_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
+
+
+}
+
+ h1 {
+    font-weight: 300;
+    color: #000000;
+    letter-spacing: 0.00em;
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+}
+
+ h2 {
+    font-weight: 300;
+    color: #000000;
+    letter-spacing: 0.00em;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.01em;
+}
+
+ h3 {
+    font-weight: 300;
+    letter-spacing: 0.00em;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.01em;
+    color: #000000;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+}
+
+ h4 {
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.02em;
+}
+
+ h5 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+ h6 {
+    font-weight: normal;
+    font-style: normal;
+    color: #000000;
+    font-size: 11pt;
+    line-height: 15pt;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+    font-size: 9pt;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+html,
+body,
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.grommetux-text-input::-webkit-input-placeholder{
+  color: #000;
+  font-size: 20px;
+  font-weight: 900;
+}
+.grommetux-text-input::-moz-placeholder{
+  color: #aaa;
+}
+.grommetux-text-input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.grommetux-button__icon, .grommetux-button__label{
+    margin: 0;
+    padding: 0;
+}
+
+
+.grommetux-text-input, .grommetux-form-field{
+
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 20px !important;
+    font-weight: 700;
+}
+
+input {
+      @extend .grommetux-text-input;
+}
+
+
+.grommetux-button{
+  display: inline-block;
+  font-size: 1.6875rem;
+}
+
+.grommetux-button__icon, .grommetux-button__label{
+
+  vertical-align: middle;
+
+
+}
+
+a{
+  text-decoration: none;
+}

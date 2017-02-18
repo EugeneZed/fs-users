@@ -1,0 +1,169 @@
+/*H**********************************************************************
+* FILENAME :        scss/index.scss
+*
+* DESCRIPTION :
+*       Brings all css files together into one
+*
+* EXPORTS :
+*       ---
+*
+* NOTES :
+*       TODO: move Home component styles inline or to seperate file.
+*
+* AUTHOR :    Jay Sridharan       START DATE :    22 Dec 16
+*
+*H*/
+
+//for hpe theme, use the following import instead
+@import 'grid';
+// @import 'easy-modal';
+@import 'colors';
+@import 'globals';
+// @import 'bom';
+// @import 'animations';
+// @import 'react-table';
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.grommet.grommetux-drop{
+
+  z-index: 1000000 !important;
+
+}
+
+.grommetux-form-field__error{
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+}
+.grommetux-list{
+
+
+    .grommetux-accordion-panel{
+      border-bottom:0;
+      background-color : #eeeeee;
+    }
+
+    & > div {
+      margin-top: 20px;
+    }
+
+    header{
+        min-height: 0px !important;
+        padding: 15px;
+        font-weight: 600 !important;
+        font-size: 15px;
+        svg{
+          width: 18px;
+          height: 18px;
+        }
+    }
+}
+
+.actionButton{
+  min-width: 0px !important;
+  height: 92px;
+  width: 92px;
+  margin: 5px;
+  text-decoration: none !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  border: 0 !important;
+  padding: 0 !important;
+
+  .grommetux-button__label{
+    margin: 0px !important;
+  }
+
+  .grommetux-button__icon{
+    margin-top: 17px;
+    svg{
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  span{
+    display: block;
+  }
+
+}
+
+.bomHomeAccordions{
+
+
+  .slider,.slider-frame,.slider-list{
+    height: 160px !important;
+  }
+
+  .slider-list .grommetux-box {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: block;
+  }
+
+}
+
+.homeTile{
+
+      margin: 0 4px 4px 0;
+      font-size: 17.5px;
+      color: #ffffff !important;
+      background-color: #fa6800 !important;
+      text-align: center;
+      vertical-align: middle !important;
+      border: 1px transparent solid;
+      display: inline-block;
+      font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif;
+      line-height: 16px;
+      width: 144px;
+      height: 62px;
+      padding: 0 !important;
+
+
+      &:hover{
+
+        background-color: #cd6317 !important;
+
+      }
+
+      &:active{
+        background-color: black !important;
+        color:white;
+      }
+
+      span{
+        top: 18.7px;
+        position: relative;
+
+      }
+}
+
+@-webkit-keyframes spinForward {
+  0% { -webkit-transform: rotate(0deg); }
+   100% { -webkit-transform: rotate(90deg); }
+}
+ @-webkit-keyframes spinReverse {
+   0% { -webkit-transform: rotate(90deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+
+.grommetux-accordion-panel--active .grommetux-accordion-panel__control{
+  -webkit-animation:spinForward 0.5s linear 1;
+  -moz-animation:spinForward 0.5s linear 1;
+  animation:spinForward 0.5s linear 1;
+  transform: rotate(90deg);
+}
+
+.grommetux-accordion-panel:not(.grommetux-accordion-panel--active) .grommetux-accordion-panel__control{
+  -webkit-animation:spinReverse 0.5s linear 1;
+  -moz-animation:spinReverse 0.5s linear 1;
+  animation:spinReverse 0.5s linear 1;
+  transform: none;
+}

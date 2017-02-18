@@ -14,15 +14,15 @@ Model.knex(knex);
 
 // console.log(models);
 
-models.User.query().insertGraph({
-  localAuth:{
-    firstName: "Jay",
-    lastName: "Sridharan",
-    email: "jayasurya.sridharan@gmail.com"
-  }
-}).then(function(me){
-  console.log(me.id);
-});
+// models.User.query().insertGraph({
+//   localAuth:{
+//     firstName: "Jay",
+//     lastName: "Sridharan",
+//     email: "jayasurya.sridharan@gmail.com"
+//   }
+// }).then(function(me){
+//   console.log(me.id);
+// });
 
 app.set('view engine', 'ejs')
    .set('views', path.join(__dirname, '../client/views'))
