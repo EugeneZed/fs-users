@@ -1,4 +1,5 @@
 /node_modules/
 /.git/
 /.idea/
-/src/client/www/
+/src/client/www/*
+/src/server/secrets.js

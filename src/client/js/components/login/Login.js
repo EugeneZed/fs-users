@@ -15,10 +15,11 @@ const validate = values => {
   if (!values.email) {
     errors.email = 'Required'
   }
-  console.log(errors);
+  // console.log(errors);
   return errors
 }
 class LoginForm extends React.Component{
+  static publicComponent = true;
   render(){
     return(
       <Form >
